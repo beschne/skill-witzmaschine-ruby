@@ -12,7 +12,7 @@ class JokeEngine
     @joke
   end
   
-  def to_speach
+  def to_speech
     "<speak><p>#{@joke}</p></speak>"
   end
   
