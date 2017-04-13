@@ -3,7 +3,7 @@
 Alexa Custom Skill you may ask to tell you silly jokes. German language only. 
 
 Developed as [Amazon Alexa Custom Skill](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/overviews/understanding-custom-skills)
-using the Ruby [Sinatra](http://www.sinatrarb.com/) framework 
+using the [Sinatra](http://www.sinatrarb.com/) Ruby DSL
 with Dan Elbert's [Alexa Skill Ruby](https://github.com/DanElbert/alexa_skills_ruby) gem. 
 The Web Service will run on the [Heroku](https://www.heroku.com/) platform.
                                                            
