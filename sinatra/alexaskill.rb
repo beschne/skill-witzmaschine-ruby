@@ -8,7 +8,11 @@ class AlexaSkill < Sinatra::Base
   
   set :root, File.dirname(__FILE__)
   
-  enable :sessions
+  enable :sessions  
+  
+  configure :production, :development do
+    enable :logging
+  end
   
   post '/' do
     content_type :json

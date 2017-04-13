@@ -1,9 +1,12 @@
 # config.ru
 
 require 'rubygems'
-require 'bundler'
+require 'bundler' 
+
+require './sinatra/alexaskill'     
 
 Bundler.require
+ 
+$stdout.sync = true
 
-require './sinatra/alexaskill'
 run AlexaSkill
