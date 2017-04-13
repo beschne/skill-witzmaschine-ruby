@@ -2,11 +2,16 @@
 
 require 'rubygems'
 require 'bundler' 
+ 
+Bundler.require 
 
 require './sinatra/alexaskill'     
 
-Bundler.require
- 
-$stdout.sync = true
+# Heroku specific configuration 
+$stdout.sync = true 
+Signal.trap("TERM") { 
+  puts 'SIGTERM caught, exiting'
+  exit! 
+}
 
 run AlexaSkill
