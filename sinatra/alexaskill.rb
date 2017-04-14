@@ -16,7 +16,9 @@ class AlexaSkill < Sinatra::Base
   
   post '/' do
     content_type :json
-    handler = Handler.new(application_id: ENV['APPLICATION_ID'], logger: logger)
+    handler = Handler.new( application_id: ENV['APPLICATION_ID'], 
+                           skip_signature_validation: false, 
+                           logger: logger                            )
     begin
       headers = { 'Signature' => request.env['HTTP_SIGNATURE'], 
                   'SignatureCertChainUrl' => request.env['HTTP_SIGNATURECERTCHAINURL'] }

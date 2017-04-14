@@ -9,7 +9,8 @@ The Web Service will run on the [Heroku](https://www.heroku.com/) platform.
                                                            
 ## Development environment
                                                         
-After cloning this repository you then need to install [Ruby](https://www.ruby-lang.org/), [rbenv](http://rbenv.org/) and [Bundler](http://bundler.io/) and than run Bundler on the Gemfile:
+After cloning this repository you then need to install [Ruby](https://www.ruby-lang.org/), [rbenv](http://rbenv.org/) 
+and [Bundler](http://bundler.io/) and than run Bundler on the Gemfile:
 
     $ rbenv local 2.2.0
     $ bundle install
@@ -18,4 +19,11 @@ After cloning this repository you then need to install [Ruby](https://www.ruby-l
 Test localy with [ngrok](https://ngrok.com/). Do not forget to adopt Alexa endpoint to ngrok changing forwarding address.
 
     $ rackup -p 3000
-    $ ngrok http 3000
+    $ ngrok http 3000 
+
+## Production environment
+
+The following environment variables need to be set:
+
+* `RACK_ENV: production` (default for Heroku)
+* `APPLICATION_ID`, the Amazon Skill Id   
