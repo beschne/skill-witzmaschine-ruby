@@ -2,18 +2,18 @@
 
 require 'alexa_skills_ruby'
 
-require_relative 'jokeengine'
+require_relative 'joke'
 
 class Handler < AlexaSkillsRuby::Handler 
                          
   on_intent('tellMeAJoke') do  
-    joke = JokeEngine.new
+    joke = Joke.new
     slots = request.intent.slots
-    response.set_output_speech_text(joke.to_s)
-    response.set_output_speech_ssml(joke.to_speech)
-    response.set_reprompt_speech_text("Noch ein Witz?")
-    response.set_reprompt_speech_ssml("<speak>Noch ein Witz?</speak>")
-    response.set_simple_card("title", "content")
+    response.set_output_speech_text(joke.text)
+    response.set_output_speech_ssml('<speak>' + joke.speech + '</speak>')
+    response.set_reprompt_speech_text(joke.text)
+    response.set_reprompt_speech_ssml('<speak><s>Ich wiederhole:</s>' + joke.speech + '</speak>')
+    response.set_simple_card('Witzmaschine', 'TODO')
     logger.info 'tellMeAJoke processed'
   end
   
