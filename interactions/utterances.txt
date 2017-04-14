@@ -1,4 +1,3 @@
-tellMeAJoke einen Witz
+tellMeAJoke nach einen Witz
 tellMeAJoke einen neuen Witz
 tellMeAJoke noch mehr Witze
-tellMeAJoke es reicht
