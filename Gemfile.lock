@@ -16,6 +16,7 @@ GEM
     minitest (5.10.1)
     multi_json (1.12.1)
     public_suffix (2.0.5)
+    puma (3.8.2)
     rack (1.6.5)
     rack-protection (1.5.3)
       rack
@@ -33,6 +34,7 @@ PLATFORMS
 
 DEPENDENCIES
   alexa_skills_ruby (~> 1.1.0)
+  puma (~> 3.8.2)
   sinatra (~> 1.4.8)
 
 RUBY VERSION

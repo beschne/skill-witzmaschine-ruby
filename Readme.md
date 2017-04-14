@@ -27,3 +27,6 @@ The following environment variables need to be set:
 
 * `RACK_ENV: production` (default for Heroku)
 * `APPLICATION_ID`, the Amazon Skill Id   
+* `WEB_CONCURRENCY`, optional, default is 2
+* `RAILS_MAX_THREADS`, optional, default is 5
+* `PORT`, optional, default is 3000
