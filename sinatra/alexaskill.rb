@@ -1,6 +1,6 @@
 # alexaskill.rb   
 
-require 'sinatra/base' 
+require 'sinatra/base'
 
 require_relative 'handler'
 
@@ -8,10 +8,15 @@ class AlexaSkill < Sinatra::Base
   
   set :root, File.dirname(__FILE__)
   
-  enable :sessions  
+  enable :sessions, :static
   
-  configure :production, :development do
+  configure :development do
     enable :logging
+  end 
+  
+  configure :production do
+    enable  :logging
+    disable :show_exceptions
   end
   
   post '/' do
@@ -27,6 +32,10 @@ class AlexaSkill < Sinatra::Base
       logger.error e.to_s
       403
     end
+  end
+     
+  not_found do        
+    404
   end
   
 end
