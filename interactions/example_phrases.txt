@@ -1,0 +1,3 @@
+Alexa öffne Witzmaschine.
+Alexa frage Witzmaschine nach einem Witz.
+Alexa frage Witzmaschine nach mehr Witzen.
