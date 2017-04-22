@@ -2,9 +2,9 @@
 
 require_relative '../spec_helper'
 
-describe Joke do 
+describe Witzmaschine::Joke do 
   
-  subject (:joke) { Joke.new }  
+  subject (:joke) { Witzmaschine::Joke.new }  
 
   it 'includes valid joke text' do 
     expect(joke).to respond_to(:text)

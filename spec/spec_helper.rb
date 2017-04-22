@@ -25,5 +25,5 @@ RSpec.configure do |config|
 end  
 
 def app
-  AlexaSkill
+  Witzmaschine::AlexaSkill
 end
