@@ -10,8 +10,8 @@ The Skill's Web Service is hosted on the [Heroku](https://www.heroku.com/) platf
                                                            
 ## Development environment
                                                         
-After cloning this repository you then need to install [Ruby](https://www.ruby-lang.org/), [rbenv](http://rbenv.org/) 
-and [Bundler](http://bundler.io/) and than run Bundler on the Gemfile:
+After cloning this repository you need to install [Ruby](https://www.ruby-lang.org/), [rbenv](http://rbenv.org/) 
+and [Bundler](http://bundler.io/) and than run Bundler on the Gemfile.
 
     $ rbenv local 2.2.0
     $ bundle install

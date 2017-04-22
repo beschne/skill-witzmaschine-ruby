@@ -1,7 +1,12 @@
-# alexaskill.rb   
+# sinatra/alexaskill.rb   
+
+ENV['RACK_ENV'] ||= 'development'
+  
+require 'bundler' 
+Bundler.require :default, ENV['RACK_ENV'].to_sym
 
 require 'sinatra/base'
-
+       
 require_relative 'handler'
 
 class AlexaSkill < Sinatra::Base
@@ -17,16 +22,21 @@ class AlexaSkill < Sinatra::Base
   configure :production do
     enable  :logging
     disable :show_exceptions
-  end
+  end 
+  
+  configure :test do   
+    set :raise_errors, true
+    set :show_exceptions, false
+  end   
   
   post '/' do
     content_type :json
-    handler = Handler.new( application_id: ENV['APPLICATION_ID'], 
-                           skip_signature_validation: false, 
-                           logger: logger                            )
+    handler = Handler.new( application_id: ENV['APPLICATION_ID'],
+                           skip_signature_validation: (Sinatra::Base.test? ? true : false), 
+                           logger: logger )
     begin
       headers = { 'Signature' => request.env['HTTP_SIGNATURE'], 
-                  'SignatureCertChainUrl' => request.env['HTTP_SIGNATURECERTCHAINURL'] }
+                  'SignatureCertChainUrl' => request.env['HTTP_SIGNATURECERTCHAINURL'] }  
       handler.handle(request.body.read, headers)
     rescue AlexaSkillsRuby::Error => e
       logger.error e.to_s

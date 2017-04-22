@@ -1,0 +1,15 @@
+{
+  "version": "1.0",
+  "session": {
+    "new": true,
+    "sessionId": "amzn1.echo-api.session.12345678-1234-1234-1234-1234567890ab",
+    "attributes": {},
+    "user": {
+      "userId": "amzn1.account.1234567890abcdef"
+    }
+  },
+  "request": {
+    "type": "LaunchRequest",
+    "requestId": "request.id.string"
+  }
+}
