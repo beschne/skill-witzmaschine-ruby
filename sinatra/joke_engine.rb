@@ -40,7 +40,7 @@ module Witzmaschine
     end
     
     def answer_text
-      sprintf(ANSWER_SPEECH_TEMPLATE, @offer, @difference, @more_or_less)
+      sprintf(ANSWER_TEXT_TEMPLATE, @offer, @difference, @more_or_less)
     end
     
     def answer_speech
