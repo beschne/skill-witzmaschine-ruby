@@ -1,4 +1,4 @@
-# spec/features/launch_skill_spec.rb  
+# spec/features/intent_tellMeAJoke_spec.rb  
         
 require_relative '../spec_helper'
 
@@ -9,7 +9,7 @@ describe 'Intent tellMeAJoke' do
     post '/', request
   end                                             
 
- it 'should accept a valid Alexa tellMeAJoke request' do 
+  it 'should accept a valid Alexa tellMeAJoke request' do 
     issue_tellMeAJoke_request
     expect(last_response).to be_ok
   end                

@@ -14,23 +14,23 @@ module Witzmaschine
   class AlexaSkill < Sinatra::Base
   
     set :root, File.dirname(__FILE__)
-  
+
     enable :sessions, :static
-  
+
     configure :development do
       enable :logging
     end 
-  
-    configure :production do
-      enable  :logging
-      disable :show_exceptions
-    end 
-  
+
     configure :test do   
       set :raise_errors, true
       set :show_exceptions, false
-    end   
-  
+    end
+
+    configure :production do
+      enable  :logging
+      disable :show_exceptions
+    end
+    
     post '/' do
       content_type :json
       handler = Handler.new(

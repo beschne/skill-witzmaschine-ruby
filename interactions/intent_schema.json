@@ -1,7 +1,81 @@
 {
   "intents": [
     {
-      "intent": "tellMeAJoke"
+      "name": "AMAZON.CancelIntent",
+      "samples": []
+    },
+    {
+      "name": "AMAZON.HelpIntent",
+      "samples": []
+    },
+    {
+      "name": "AMAZON.StopIntent",
+      "samples": []
+    },
+    {
+      "name": "askForBuns",
+      "samples": [
+        "{number} Brötchen",
+        "{number} ",
+        "Ich hätte gerne {number} Brötchen"
+      ],
+      "slots": [
+        {
+          "name": "number",
+          "type": "AMAZON.NUMBER",
+          "samples": []
+        }
+      ]
+    },
+    {
+      "name": "tellMeAJoke",
+      "samples": [
+        "nach einem Witz",
+        "nach noch einem Witz",
+        "nach einen neuen Witz",
+        "soll mir einen Witz erzählen"
+      ],
+      "slots": []
     }
-  ]
+  ],
+  "prompts": [
+    {
+      "id": "Elicit.Intent-askForBuns.IntentSlot-number",
+      "promptVersion": "1.0",
+      "definitionVersion": "1.0",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "Wieviele Brötchen hättest Du gerne?"
+        }
+      ]
+    }
+  ],
+  "dialog": {
+    "version": "1.0",
+    "intents": [
+      {
+        "name": "askForBuns",
+        "confirmationRequired": false,
+        "prompts": {},
+        "slots": [
+          {
+            "name": "number",
+            "type": "AMAZON.NUMBER",
+            "elicitationRequired": true,
+            "confirmationRequired": false,
+            "prompts": {
+              "elicit": "Elicit.Intent-askForBuns.IntentSlot-number"
+            }
+          }
+        ]
+      },
+      {
+        "name": "tellMeAJoke",
+        "confirmationRequired": false,
+        "prompts": {},
+        "slots": []
+      }
+    ]
+  }
 }

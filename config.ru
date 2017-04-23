@@ -3,4 +3,4 @@
 $stdout.sync = true 
 
 require './sinatra/alexaskill'     
-run AlexaSkill
+run Witzmaschine::AlexaSkill
