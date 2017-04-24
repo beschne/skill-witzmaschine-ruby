@@ -17,7 +17,7 @@ and [Bundler](http://bundler.io/) and than run Bundler on the Gemfile.
     $ bundle install
     $ rbenv rehash
 
-Test localy with [ngrok](https://ngrok.com/). Do not forget to adopt Alexa endpoint to ngrok changing forwarding address.
+Test localy with [ngrok](https://ngrok.com/). Do not forget to adopt Alexa endpoint to ngrok's changing forwarding address.
 
     $ rackup -p 3000
     $ ngrok http 3000 
