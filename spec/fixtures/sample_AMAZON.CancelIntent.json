@@ -1,0 +1,23 @@
+{
+  "session": {
+    "sessionId": "SessionId.12345678-1234-1234-1234-1234567890ab",
+    "application": {
+      "applicationId": "amzn1.ask.skill.12345678-1234-1234-1234-1234567890ab"
+    },
+    "attributes": {},
+    "user": {
+      "userId": "amzn1.account.amzn1.account.1234567890abcdef"
+    },
+    "new": true
+  },
+  "request": {
+    "type": "IntentRequest",
+    "requestId": "request.id.string",
+    "locale": "de-DE",
+    "intent": {
+      "name": "AMAZON.CancelIntent",
+      "slots": {}
+    }
+  },
+  "version": "1.0"
+}

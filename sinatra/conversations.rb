@@ -35,10 +35,10 @@ module Witzmaschine
     '<s>Du kannst nicht mehr als %d Brötchen haben.</s>' +
     '<s>Versuche es doch noch einmal.</s>'
 
-   HELP_TEXT = 
-     'Wie viele Brötchen dürfen es den sein?'
+   HELP_TEXT   = 'Wie viele Brötchen dürfen es den sein?'
+   HELP_SPEECH = '<s>Wie viele Brötchen dürfen es den sein?</s>'
 
-   HELP_SPEECH =
-     '<s>Wie viele Brötchen dürfen es den sein?</s>'
-
+   GOODBYE_TEXT   = 'Auf wiederhören.'
+   GOODBYE_SPEECH = '<s>Auf wiederhören.</s>'
+     
 end

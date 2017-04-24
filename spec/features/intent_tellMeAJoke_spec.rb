@@ -5,7 +5,7 @@ require_relative '../spec_helper'
 describe 'Intent tellMeAJoke' do
 
   def issue_tellMeAJoke_request
-    request = load_sample_json('sample_tellMeAJoke_request.json')
+    request = load_sample_json('sample_tellMeAJoke_intent.json')
     post '/', request
   end                                             
 

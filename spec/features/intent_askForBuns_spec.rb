@@ -5,13 +5,13 @@ require_relative '../spec_helper'
 describe 'Intent askForBuns' do
 
   it 'should accept a valid Alexa askForBuns request' do  
-    request = load_sample_json('sample_ask_for_12_buns_request.json')
+    request = load_sample_json('sample_ask_for_12_buns_intent.json')
     post '/', request
     expect(last_response).to be_ok
   end                
 
   it 'should answer with a valid response' do
-    request = load_sample_json('sample_ask_for_12_buns_request.json')
+    request = load_sample_json('sample_ask_for_12_buns_intent.json')
     post '/', request   
     expect(last_response).to be_ok
     response = JSON.parse last_response.body     
@@ -28,7 +28,7 @@ describe 'Intent askForBuns' do
   end                                             
   
   it 'should handle a 0 buns request' do 
-    request = load_sample_json('sample_ask_for_no_buns_request.json')
+    request = load_sample_json('sample_ask_for_no_buns_intent.json')
     post '/', request  
     expect(last_response).to be_ok
     response = JSON.parse last_response.body     
@@ -45,7 +45,7 @@ describe 'Intent askForBuns' do
   end
   
   it 'should handle a too much buns request' do
-    request = load_sample_json('sample_ask_for_2000_buns_request.json')
+    request = load_sample_json('sample_ask_for_2000_buns_intent.json')
     post '/', request         
     expect(last_response).to be_ok
     response = JSON.parse last_response.body     
@@ -67,7 +67,7 @@ describe 'Intent askForBuns' do
   end
 
   it 'should handle a no number of buns request' do
-    request = load_sample_json('sample_ask_for_no_number_of_buns_request.json')
+    request = load_sample_json('sample_ask_for_no_number_of_buns_intent.json')
     post '/', request         
     expect(last_response).to be_ok
     response = JSON.parse last_response.body     
