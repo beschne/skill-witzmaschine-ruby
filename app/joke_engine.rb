@@ -1,4 +1,4 @@
-# sinatra/jokeengine.rb
+# app/jokeengine.rb
 
 module Witzmaschine
 

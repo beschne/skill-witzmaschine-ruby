@@ -1,4 +1,4 @@
-# sinatra/handler.rb
+# app/handler.rb
 
 require 'alexa_skills_ruby'
 

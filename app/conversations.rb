@@ -1,4 +1,4 @@
-# sinatra/conversations.rb
+# app/conversations.rb
 
 module Witzmaschine
 

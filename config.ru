@@ -2,5 +2,5 @@
 
 $stdout.sync = true 
 
-require './sinatra/alexaskill'     
+require './app/alexaskill'     
 run Witzmaschine::AlexaSkill

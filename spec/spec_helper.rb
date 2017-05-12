@@ -14,7 +14,7 @@ MultiJson.use :oj
 
 Dir[File.expand_path('../support/**/*', __FILE__)].each { |f| require f }
  
-require File.expand_path('../../sinatra/alexaskill', __FILE__)
+require File.expand_path('../../app/alexaskill', __FILE__)
 
 RSpec.configure do |config|
   include Rack::Test::Methods

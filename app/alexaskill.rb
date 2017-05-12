@@ -1,4 +1,4 @@
-# sinatra/alexaskill.rb   
+# app/alexaskill.rb   
 
 ENV['RACK_ENV'] ||= 'development'
   
